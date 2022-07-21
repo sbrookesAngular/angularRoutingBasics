@@ -20,7 +20,12 @@ const routes: Routes = [
     //the empty path will be redirected to the home component
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     
-    //this path redirects to the home component
+    /*  
+    this path: '**', is called a 'wildcard' and redirects to the home component is someone tries to but something like
+    /sdfkjsd;kjfhsdjkf;sdf
+    you can redirect home or direct to a 404
+    It must be at bottom/end of the array!!!
+    */
     {path: '**', redirectTo: '/home', pathMatch: 'full'} 
 
 ];
